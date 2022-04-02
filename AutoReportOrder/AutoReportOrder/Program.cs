@@ -26,9 +26,7 @@ namespace AutoReportOrder
                 {
                     for (int i = 0; i < UserConfigModel.Cycles; i++)
                     {
-                        //SaveRpair(UserInfo.data, UserConfigModel);
-                        Console.WriteLine("时间:" + DateTime.Now.ToString());
-
+                        SaveRpair(UserInfo.data, UserConfigModel);
                         Thread.Sleep(rd.Next((UserConfigModel.Interval - 5) * 1000 > 0 ? (UserConfigModel.Interval - 5) * 1000 : 0, (UserConfigModel.Interval + 5) * 1000));
                     }
                 }
@@ -36,9 +34,7 @@ namespace AutoReportOrder
                 {
                     while (true)
                     {
-                        //SaveRpair(UserInfo.data, UserConfigModel);
-                        //Thread.Sleep(UserConfigModel.Interval * 1000);
-                        Console.WriteLine("时间:" + DateTime.Now.ToString());
+                        SaveRpair(UserInfo.data, UserConfigModel);
                         Thread.Sleep(rd.Next((UserConfigModel.Interval - 5) * 1000 > 0 ? (UserConfigModel.Interval - 5) * 1000 : 0, (UserConfigModel.Interval + 5) * 1000));
                     }
                 }
